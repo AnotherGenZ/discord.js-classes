@@ -1,0 +1,26 @@
+{
+  "name": "discord.js-classes",
+  "version": "1.0.1",
+  "description": "Unofficial discord.js bot framework",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "discord.js": "^11.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memework/discord.js-classes.git"
+  },
+  "author": "motiontheking",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/memework/discord.js-classes/issues"
+  },
+  "homepage": "https://github.com/memework/discord.js-classes#readme"
+}

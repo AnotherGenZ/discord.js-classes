@@ -1,8 +1,8 @@
 /* Client Class */
 "use strict";
-var Discord = require("discord.js");
-var Parser = require("./Parser");
-var Register = require("./Register");
+const Discord = require("discord.js");
+const Parser = require("./Parser");
+const Register = require("./Register");
 
 class Client extends Discord.Client {
 	constructor(options, clientOptions) {

@@ -1,8 +1,8 @@
 /* Register Class */
 "use strict";
-var Discord = require("discord.js");
-var path = require("path");
-var fs = require("fs");
+const Discord = require("discord.js");
+const path = require("path");
+const fs = require("fs");
 
 class Register {
 	constructor(client, commandPath, eventPath) {
@@ -19,10 +19,10 @@ class Register {
 	
 	/* Command Registration Method */
 	registerCommands() {
-		var commandFolder = fs.readdirSync(this.commandPath);
+		let commandFolder = fs.readdirSync(this.commandPath);
 		commandFolder.forEach(c => {
-			var Command = require(path.join(this.commandPath, c)).command;
-			var cmd = new Command(this.client);
+			let Command = require(path.join(this.commandPath, c)).command;
+			let cmd = new Command(this.client);
 			this.commands.set(cmd.name, cmd);
 		});
 		return this;
@@ -30,10 +30,10 @@ class Register {
 	
 	/* Event Registration Method */
 	registerEvents() {
-		var eventGroup = fs.readdirSync(this.eventPath);
+		let eventGroup = fs.readdirSync(this.eventPath);
 		eventGroup.forEach(e => {
-			var Event = require(path.join(this.eventPath, e)).event;
-			var event = new Event(this.client);
+			let Event = require(path.join(this.eventPath, e)).event;
+			let event = new Event(this.client);
 			this.events.set(event.event, event);
 		});
 		this.client.parser.handleEvents();
