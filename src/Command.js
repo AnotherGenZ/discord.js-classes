@@ -6,10 +6,12 @@ class Command {
 		this.name = options.name;
 		this.usage = options.usage || "";
 		this.group = options.group || "";
-		if (!this.name) throw new Error(`A command is missing a name.`);
+		this.ownerOnly = options.ownerOnly || false;
+		this.disabled = options.disabled || false;
+		if (!this.name) throw new Error(`Constructor ${this.constructor.name} is missing a command name.`);
 	}
 	
-	run(message, params) {
+	async run(message, params) {
 		throw new Error(`The command "${this.name}" does not override the run method.`);
 	}
 }

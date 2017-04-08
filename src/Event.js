@@ -6,7 +6,7 @@ class Event {
 		Object.defineProperty(this, "client", { value: client });
 	}
 	
-	run(params) {
+	async run(params) {
 		throw new Error(`The event "${this.event}" does not override the run method.`);
 	}
 }

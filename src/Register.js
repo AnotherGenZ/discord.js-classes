@@ -14,7 +14,7 @@ class Register {
 		
 		/* Core Paths */
 		this.commandPath = commandPath;
-		this.eventPath = eventPath || "";
+		this.eventPath = eventPath;
 	}
 	
 	/* Command Registration Method */
