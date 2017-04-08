@@ -10,6 +10,6 @@ exports.command = class Ping extends Command {
 
   async run(message, params) {
     const msg = await message.channel.send("Ping?");
-    msg.edit(`Pong! ${msg.createdTimestamp - message.createdTimestamp}ms`);
+    msg.edit(`Pong! \`${msg.createdTimestamp - message.createdTimestamp}\`ms`);
   }
 }
