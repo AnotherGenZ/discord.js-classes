@@ -14,7 +14,7 @@ class Parser {
 		let params = message.content.split(" ").slice(1);
 		let cmd = this.client.register.commands.find("name", commandName);
 		if (cmd.disabled) return;
-		if (cmd.ownerOwnly && message.author.id !== this.client.ownerID) return message.channel.send("This command is owner only.");
+		if (cmd.ownerOnly && message.author.id !== this.client.ownerID) return message.channel.send("This command is owner only.");
 		if (cmd) cmd.run(message, params);
 	}
 	
