@@ -1,6 +1,6 @@
 {
   "name": "discord.js-classes",
-  "version": "1.0.3.1",
+  "version": "1.0.4",
   "description": "Unofficial discord.js bot framework",
   "main": "index.js",
   "directories": {
