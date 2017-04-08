@@ -1,7 +1,7 @@
 "use strict";
-const { Command } = require("../../index");
+const { Event } = require("../../index");
 
-exports.command = class Ping extends Command {
+exports.event = class Ready extends Event {
   constructor(client) {
     super(client, "ready");
   }
