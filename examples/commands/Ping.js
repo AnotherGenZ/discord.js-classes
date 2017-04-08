@@ -1,7 +1,7 @@
 "use strict";
 const { Command } = require("../../index");
 
-exports.command = class Ping extends Command {
+module.exports = class Ping extends Command {
   constructor(client) {
     super(client, {
       name: "ping"

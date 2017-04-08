@@ -24,7 +24,7 @@
 ```js
 const { Command } = require("discord.js-classes");
 
-exports.command = class Ping extends Command {
+module.exports = class Ping extends Command {
   constructor(client) {
     super(client, {
       name: "ping"

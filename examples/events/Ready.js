@@ -1,7 +1,7 @@
 "use strict";
 const { Event } = require("../../index");
 
-exports.event = class Ready extends Event {
+module.exports = class Ready extends Event {
   constructor(client) {
     super(client, "ready");
   }

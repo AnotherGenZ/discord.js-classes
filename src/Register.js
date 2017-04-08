@@ -21,7 +21,7 @@ class Register {
 	registerCommands() {
 		let commandFolder = fs.readdirSync(this.commandPath);
 		commandFolder.forEach(c => {
-			let Command = require(path.join(this.commandPath, c)).command;
+			let Command = require(path.join(this.commandPath, c));
 			let cmd = new Command(this.client);
 			this.commands.set(cmd.name, cmd);
 		});
@@ -32,7 +32,7 @@ class Register {
 	registerEvents() {
 		let eventGroup = fs.readdirSync(this.eventPath);
 		eventGroup.forEach(e => {
-			let Event = require(path.join(this.eventPath, e)).event;
+			let Event = require(path.join(this.eventPath, e));
 			let event = new Event(this.client);
 			this.events.set(event.event, event);
 		});
