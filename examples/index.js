@@ -1,5 +1,6 @@
 "use strict";
-const { Client } = require("../");
+
+const { Client } = require("../index");
 const path = require("path");
 new Client({
 	token: "<token>",
