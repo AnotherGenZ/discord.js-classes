@@ -1,7 +1,7 @@
 # discord.js-classes
 
 ## Installation & Setup
-1. Run `npm i --save discord.js-classes`
+1. Run `npm install discord.js-classes --save`
 
 An example client setup looks like this:
 ``js
