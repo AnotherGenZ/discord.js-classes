@@ -1,7 +1,7 @@
 # discord.js-classes
 
 ## Installation & Setup
-1. Run `npm i --save discord.js-classes`
+1. Run `npm install discord.js-classes --save`
 2. Follow the example bot file in the [examples](https://github.com/memework/discord.js-classes/tree/master/examples) directory
 
 ### Client Options
