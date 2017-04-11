@@ -5,7 +5,7 @@
 
 An example client setup looks like this:
 ``js
-const Client = require("discord.js-classes").Client
+const { Client } = require("discord.js-classes")
 const path = require("path");
 new Client({
 	token: "<token>",
@@ -33,7 +33,7 @@ new Client({
 ### Creating Commands - Simple Ping Command
 > This ping command uses async/await - Node 7+ is required!
 ```js
-const Command  = require("discord.js-classes").Command;
+const { Command }  = require("discord.js-classes");
 
 module.exports = class Ping extends Command {
   constructor(client) {
