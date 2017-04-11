@@ -2,8 +2,19 @@
 
 ## Installation & Setup
 1. Run `npm i --save discord.js-classes`
-2. Follow the example bot file in the [examples](https://github.com/memework/discord.js-classes/tree/master/examples) directory
 
+An example client setup looks like this:
+``js
+const Client = require("discord.js-classes").Client
+const path = require("path");
+new Client({
+	token: "<token>",
+	prefix: ".",
+	selfbot: false,
+	commandPath: path.join(__dirname, "commands"),
+	eventPath: path.join(__dirname, "events"),
+}).start();
+```
 ### Client Options
 - ownerID - UserID (string)
 - token - Bot token (string)
@@ -22,7 +33,7 @@
 ### Creating Commands - Simple Ping Command
 > This ping command uses async/await - Node 7+ is required!
 ```js
-const { Command } = require("discord.js-classes");
+const Command  = require("discord.js-classes").Command;
 
 module.exports = class Ping extends Command {
   constructor(client) {
